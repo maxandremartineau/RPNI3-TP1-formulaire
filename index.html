@@ -1,13 +1,204 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>martineaumaxandre-tp1-formulaire</title>
+    <title>Formulaire de don</title>
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+
+    <header>
+      <p>Unicef Canada
+      </p>
+    </header>
+
+    <main>
+      <h1>Faire un don</h1>
+
+      <form action="merci.html" method="post">
+
+        <section>
+          <h2>Étape 1 — Informations sur le don</h2>
+
+          <fieldset>
+            <legend>Type de versement</legend>
+
+            <ul>
+              <li>
+                <input type="radio" id="versement-unique" name="versement" value="unique"/>
+                <label for="versement-unique">Un versement unique</label>
+              </li>
+
+              <li>
+                <input type="radio" id="versement-periodique" name="versement" value="periodique"/>
+                <label for="versement-periodique">Versements périodiques</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Montant du don</legend>
+
+              <ul>
+                <li>
+                  <input type="radio" id="montant-5" name="montant" value="5" />
+                  <label for="montant-5">5 $</label>
+                </li>
+
+                <li>
+                  <input type="radio" id="montant-10" name="montant" value="10" />
+                  <label for="montant-10">10 $</label>
+                </li>
+
+                <li>
+                  <input type="radio" id="montant-20" name="montant" value="20" />
+                  <label for="montant-20">20 $</label>
+                </li>
+
+                <li>
+                  <input type="radio" id="montant-50" name="montant" value="50" />
+                  <label for="montant-50">50 $</label>
+                </li>
+
+                <li>
+                  <input type="radio" id="montant-200" name="montant" value="200" />
+                  <label for="montant-200">200 $</label>
+                </li>
+              </ul>
+
+              <p>
+                <label for="montant-personnalise">Autre montant</label>
+                <input type="number" id="montant-personnalise" name="montant-personnalise" value="" />
+              </p>
+            </fieldset>
+          </fieldset>
+          <nav>
+            <button type="button">Suivant</button>
+          </nav>
+        </section>
+
+        <section>
+          <h2>Étape 2 — Coordonnées du donateur</h2>
+
+          <fieldset>
+            <legend>Informations du donateur</legend>
+
+            <p>
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" value="" />
+            </p>
+
+            <p>
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" value="" />
+            </p>
+
+            <p>
+              <label for="adresse">Adresse</label>
+              <input type="text" id="adresse" name="adresse" value="" />
+            </p>
+
+            <p>
+              <label for="ville">Ville</label>
+              <input type="text" id="ville" name="ville" value="" />
+            </p>
+
+            <p>
+              <label for="code-postal">Code postal</label>
+              <input type="text" id="code-postal" name="code-postal" value="" />
+            </p>
+
+            <p>
+              <label for="courriel">Courriel</label>
+              <input type="email" id="courriel" name="courriel" value="" />
+            </p>
+
+          </fieldset>
+
+          <nav>
+            <button type="button">Précédent</button>
+            <button type="button">Suivant</button>
+          </nav>
+        </section>
+
+        <section>
+          <h2>Étape 3 — Information sur le paiement</h2>
+
+          <fieldset>
+            <legend>Type de carte de crédit</legend>
+
+            <ul>
+              <li>
+                <input type="radio" id="visa" name="type-carte" value="visa"/>
+                <label for="visa">Visa</label>
+              </li>
+
+              <li>
+                <input type="radio" id="mastercard" name="type-carte" value="mastercard"/>
+                <label for="mastercard">Mastercard</label>
+              </li>
+
+              <li>
+                <input type="radio" id="american-express" name="type-carte" value="american-express"/>
+                <label for="american-express">American Express</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informations de la carte</legend>
+
+            <p>
+              <label for="numero-carte">Numéro de carte</label>
+              <input type="text" id="numero-carte" name="numero-carte" value=""/>
+            </p>
+
+            <p>
+              <label for="expiration">Date d'expiration</label>
+              <input type="text" id="expiration" name="expiration" value=""/>
+            </p>
+
+            <p>
+              <label for="validation">Code de validation</label>
+              <input type="text" id="validation" name="validation" value=""/>
+            </p>
+
+          </fieldset>
+
+          <nav>
+            <button type="button">Précédent</button>
+            <button type="button">Suivant</button>
+          </nav>
+
+        </section>
+
+        <section>
+          <h2>Étape 4 — Résumé du don</h2>
+
+          <fieldset>
+            <legend>Résumé</legend>
+
+            <p>Type de versement : Lorem ipsum</p>
+            <p>Type de montant : Lorem ipsum</p>
+            <p>Montant : Lorem ipsum</p>
+            <p>Nom du donateur : Lorem ipsum</p>
+            <p>Entreprise : Lorem ipsum</p>
+            <p>Adresse : Lorem ipsum</p>
+            <p>Courriel : Lorem ipsum</p>
+            <p>Type de carte : Lorem ipsum</p>
+          </fieldset>
+        </section>
+        <nav>
+          <button type="button">Précédent</button>
+          <button type="submit">Faire le don</button>
+        </nav>
+      </form>
+    </main>
+
+    <footer>
+      <p>Unicef Canada</p>
+    </footer>
+
   </body>
 </html>
