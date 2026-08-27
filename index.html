@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -9,16 +8,17 @@
   <body>
 
     <header>
-      <p>Unicef Canada
+      <p>SPA Québec
       </p>
     </header>
 
     <main>
-      <h1>Faire un don</h1>
+      <h1 class="text-4xl font-bold text-red-600">Faire un don</h1>
 
-      <form action="merci.html" method="post">
-
-        <section>
+      <form action="merci.html" method="post" class="max-w-3xl mx-auto px-4">
+        
+        
+        <section class="etape max-w-3xl mx-auto">
           <h2>Étape 1 — Informations sur le don</h2>
 
           <fieldset>
@@ -40,45 +40,45 @@
           <fieldset>
             <legend>Montant du don</legend>
 
-              <ul>
-                <li>
-                  <input type="radio" id="montant-5" name="montant" value="5" />
-                  <label for="montant-5">5 $</label>
-                </li>
+            <ul>
+              <li>
+                <input type="radio" id="montant-5" name="montant" value="5" />
+                <label for="montant-5">5 $</label>
+              </li>
 
-                <li>
-                  <input type="radio" id="montant-10" name="montant" value="10" />
-                  <label for="montant-10">10 $</label>
-                </li>
+              <li>
+                <input type="radio" id="montant-10" name="montant" value="10" />
+                <label for="montant-10">10 $</label>
+              </li>
 
-                <li>
-                  <input type="radio" id="montant-20" name="montant" value="20" />
-                  <label for="montant-20">20 $</label>
-                </li>
+              <li>
+                <input type="radio" id="montant-20" name="montant" value="20" />
+                <label for="montant-20">20 $</label>
+              </li>
 
-                <li>
-                  <input type="radio" id="montant-50" name="montant" value="50" />
-                  <label for="montant-50">50 $</label>
-                </li>
+              <li>
+                <input type="radio" id="montant-50" name="montant" value="50" />
+                <label for="montant-50">50 $</label>
+              </li>
 
-                <li>
-                  <input type="radio" id="montant-200" name="montant" value="200" />
-                  <label for="montant-200">200 $</label>
-                </li>
-              </ul>
+              <li>
+                <input type="radio" id="montant-200" name="montant" value="200" />
+                <label for="montant-200">200 $</label>
+              </li>
+            </ul>
 
-              <p>
-                <label for="montant-personnalise">Autre montant</label>
-                <input type="number" id="montant-personnalise" name="montant-personnalise" value="" />
-              </p>
-            </fieldset>
+            <p>
+              <label for="montant-personnalise">Autre montant</label>
+              <input type="number" id="montant-personnalise" name="montant-personnalise" value="" />
+            </p>
           </fieldset>
+
           <nav>
-            <button type="button">Suivant</button>
+            <button type="button" class="suivant">Suivant</button>
           </nav>
         </section>
 
-        <section>
+        <section class="etape hidden max-w-3xl mx-auto">
           <h2>Étape 2 — Coordonnées du donateur</h2>
 
           <fieldset>
@@ -117,12 +117,12 @@
           </fieldset>
 
           <nav>
-            <button type="button">Précédent</button>
-            <button type="button">Suivant</button>
+            <button type="button" class="precedent">Précédent</button>
+            <button type="button" class="suivant">Suivant</button>
           </nav>
         </section>
 
-        <section>
+        <section class="etape hidden max-w-3xl mx-auto">
           <h2>Étape 3 — Information sur le paiement</h2>
 
           <fieldset>
@@ -167,13 +167,13 @@
           </fieldset>
 
           <nav>
-            <button type="button">Précédent</button>
-            <button type="button">Suivant</button>
+            <button type="button" class="precedent">Précédent</button>
+            <button type="button" class="suivant">Suivant</button>
           </nav>
 
         </section>
 
-        <section>
+        <section class="etape hidden max-w-3xl mx-auto">
           <h2>Étape 4 — Résumé du don</h2>
 
           <fieldset>
@@ -188,17 +188,19 @@
             <p>Courriel : Lorem ipsum</p>
             <p>Type de carte : Lorem ipsum</p>
           </fieldset>
+
+          <nav>
+            <button type="button" class="precedent">Précédent</button>
+            <button type="submit">Faire le don</button>
+          </nav>
         </section>
-        <nav>
-          <button type="button">Précédent</button>
-          <button type="submit">Faire le don</button>
-        </nav>
+
       </form>
     </main>
 
     <footer>
-      <p>Unicef Canada</p>
+      <p>SPA Québec</p>
     </footer>
-
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
