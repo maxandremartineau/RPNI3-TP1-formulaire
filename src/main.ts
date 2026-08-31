@@ -1,4 +1,7 @@
 import "./css/style.css";
+
+
+// Steps left
 let etape = 0;
 
 const sections = document.querySelectorAll(".etape");
@@ -29,3 +32,16 @@ precedent.forEach((bouton) => {
   });
 });
 
+// interface
+
+// Validations
+
+// function validerEtape(etape:number): boolean{
+//   case 0:
+//     const nomElemen = document.getElementById('nom');
+// }
+
+// async function obtenirMessages(): Promise<void> {
+//   const reponse: await fetch('objJSONMessages.json');            
+//   messagesJSON = await reponse.json();
+// }
