@@ -1,22 +1,52 @@
 {
-    "prenom": {
-        "vide": "Vous devez entrer votre prénom.",
-        "pattern": "Pour le prénom, les accents français, les espaces, les tirets et les apostrophes sont permis."
-    },
     "nom": {
         "vide": "Vous devez entrer votre nom de famille.",
         "pattern": "Pour le nom de famille, les accents français, les espaces, les tirets et les apostrophes sont permis."
     },
+
+    "prenom": {
+        "vide": "Vous devez entrer votre prénom.",
+        "pattern": "Pour le prénom, les accents français, les espaces, les tirets et les apostrophes sont permis."
+    },
+
+    "adresse": {
+        "vide": "Vous devez entrer votre adresse.",
+        "pattern": "Assurez-vous d'entrer une adresse valide."
+    },
+
+    "ville": {
+        "vide": "Vous devez entrer votre ville.",
+        "pattern": "Pour la ville, les accents français, les espaces, les tirets et les apostrophes sont permis."
+    },
+
+    "code-postal": {
+        "vide": "Vous devez entrer votre code postal.",
+        "pattern": "Assurez-vous d'entrer un code postal valide."
+    },
+
     "courriel": {
         "vide": "Vous devez entrer votre adresse courriel.",
         "pattern": "Assurez-vous d'entrer une adresse courriel valide.",
         "type": "Assurez-vous d'entrer une adresse courriel."
     },
-    "sujet": {
-        "vide": "Vous devez entrer un sujet.",
-        "pattern": "Entrez une sujet valide."
+
+    "montant": {
+    "vide": "Vous devez choisir un montant.",
+    "pattern": "Veuillez entrer un montant valide."
     },
-    "message": {
-        "vide": "Entrez un message."
+
+    "numero-carte": {
+        "vide": "Vous devez entrer votre numéro de carte.",
+        "pattern": "Assurez-vous d'entrer un numéro de carte valide."
+    },
+
+    "expiration": {
+        "vide": "Vous devez entrer la date d'expiration de votre carte.",
+        "pattern": "Assurez-vous d'entrer une date d'expiration valide."
+    },
+
+    "validation": {
+        "vide": "Vous devez entrer le code de validation.",
+        "pattern": "Assurez-vous d'entrer un code de validation valide."
     }
 }
