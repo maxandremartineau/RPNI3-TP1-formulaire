@@ -1,3 +1,4 @@
+```html
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -5,52 +6,83 @@
     <title>Formulaire de don</title>
   </head>
 
-  <body class="bg-gray-50 min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col bg-white text-[#18294e]">
 
-    <header class="bg-[#18294e] text-white p-8">
-      <p>SPA Québec</p>
+    <header class=" bg-[#18294e] border-t-2 px-4 flex items-center justify-between">
+      <img
+        src="/src/assets/logoOpti.svg"
+        alt="SPA Québec"
+        class="w-9 h-9 object-contain"
+      />
+
+      <button
+        type="button"
+        class="bg-[#ffad21] text-[#18294e] px-4 py-1.5 rounded-sm text-[10px] font-bold"
+      >
+        Faire un don
+      </button>
     </header>
 
-    <main class="py-10 flex-1 flex items-center justify-center flex-col">
+    <main class="flex-1 flex flex-col items-center px-4 py-6">
 
       <h1 class="text-4xl font-bold text-[#18294e] text-center mb-8">
         Faire un don
       </h1>
 
-      <nav aria-label="Étapes du formulaire de don">
-        <ol>
-          <li aria-current="step">
-            <span class="sr-only">Étape 1 </span>
-              Étape 1
+      <nav class="w-full max-w-[600px] mx-auto my-12" aria-label="Étapes du formulaire de don">
+        <ol class="flex items-center justify-center">
+
+          <li class="flex items-center">
+            <span class="cercle-etape w-[60px] h-[60px] rounded-full bg-white border-[3px] border-[#FFB42D] flex items-center justify-center font-bold text-xl text-black">
+              <span class="sr-only">Étape 1 </span>
+              1
+            </span>
+
+            <span class="ligne-etape w-[85px] h-[3px] bg-[#17294E]"></span>
+          </li>
+
+          <li class="flex items-center">
+            <span class="cercle-etape w-[60px] h-[60px] rounded-full bg-white border-[3px] border-[#17294E] flex items-center justify-center font-bold text-xl text-[#17294E]">
+              <span class="sr-only">Étape 2 </span>
+              2
+            </span>
+
+            <span class="ligne-etape w-[85px] h-[3px] bg-[#17294E]"></span>
+          </li>
+
+          <li class="flex items-center">
+            <span class="cercle-etape w-[60px] h-[60px] rounded-full bg-white border-[3px] border-[#17294E] flex items-center justify-center font-bold text-xl text-[#17294E]">
+              <span class="sr-only">Étape 3 </span>
+              3
+            </span>
+
+            <span class="ligne-etape w-[85px] h-[3px] bg-[#17294E]"></span>
           </li>
 
           <li>
-            <span class="sr-only">Étape 2 </span>
-              Étape 2
+            <span class="cercle-etape w-[60px] h-[60px] rounded-full bg-white border-[3px] border-[#17294E] flex items-center justify-center font-bold text-xl text-[#17294E]">
+              <span class="sr-only">Étape 4 </span>
+              4
+            </span>
           </li>
 
-          <li>
-            <span class="sr-only">Étape 3 </span>
-            Étape 3
-          </li>
-
-          <li>
-            <span class="sr-only">Étape 4 </span>
-              Étape 4
-          </li>
         </ol>
       </nav>
 
-      <form action="merci.html" method="post" class="max-w-3xl mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
+      <form action="merci.html" method="post" class="max-w-3xl mx-auto px-6 py-8 bg-[#0E4788] rounded-lg shadow-md">
+
+        <!-- ============================== -->
+        <!-- ÉTAPE 1 -->
+        <!-- ============================== -->
 
         <section class="etape max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-[#18294e] mb-6">
+          <h2 class="text-2xl font-bold text-white mb-6">
             Étape 1 — Informations sur le don
           </h2>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
-            <legend class="font-semibold text-[#18294e] px-2">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
+            <legend class="font-semibold text-white px-2">
               Type de versement
             </legend>
 
@@ -58,14 +90,14 @@
               <li>
                 <input type="radio" id="versement-unique" name="versement" value="unique" required checked class="peer sr-only"/>
                 <label for="versement-unique"
-                  class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                  class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
                   Un versement unique
                 </label>
               </li>
@@ -74,277 +106,315 @@
                 <input type="radio" id="versement-periodique" name="versement" value="periodique" class="peer sr-only"/>
                 <label
                   for="versement-periodique"
-                  class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                  class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
                   Versements périodiques
                 </label>
               </li>
-
             </ul>
           </fieldset>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
-            <legend class="font-semibold text-[#18294e] px-2">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
+            <legend class="font-semibold text-white px-2">
               Montant du don
             </legend>
 
             <ul class="grid grid-cols-2 sm:grid-cols-5 gap-3">
               <li>
                 <input type="radio" id="montant-5" name="montant" value="5" class="peer sr-only"/>
-                <label for="montant-5" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                <label for="montant-5" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">
-                        5 $</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  5 $
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="montant-10" name="montant" value="10" class="peer sr-only"/>
-                <label for="montant-10" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                <label for="montant-10" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">10 $</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  10 $
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="montant-20" name="montant" value="20" class="peer sr-only"/>
-                <label for="montant-20" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                <label for="montant-20" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">20 $</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  20 $
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="montant-50" name="montant" value="50" class="peer sr-only"/>
-                <label for="montant-50" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                <label for="montant-50" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">50 $</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  50 $
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="montant-200" name="montant" value="200" class="peer sr-only"/>
-                <label for="montant-200" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+                <label for="montant-200" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">200 $</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  200 $
+                </label>
               </li>
             </ul>
 
             <div class="mt-5">
               <label for="montant-personnalise" class="block mb-2">
               </label>
+
               <input
                 type="number"
                 id="montant-personnalise"
                 name="montant-personnalise"
                 min="1"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                class="w-full border-2 bg-white border-white rounded-lg px-3 py-2 focus:outline-none hover:border-[#FFB42D] focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-montant-personnalise" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-montant-personnalise" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
           </fieldset>
 
           <nav class="flex justify-end">
-            <button type="button" class="suivant bg-[#18294e] hover:bg-[#101c38] text-white px-6 py-2 rounded-lg">
+            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
               Suivant
             </button>
           </nav>
 
         </section>
 
+
+        <!-- ============================== -->
+        <!-- ÉTAPE 2 -->
+        <!-- ============================== -->
+
         <section class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-[#18294e] mb-6">
+          <h2 class="text-2xl font-bold text-white mb-6">
             Étape 2 — Coordonnées du donateur
           </h2>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-[#18294e] px-2">
+            <legend class="font-semibold text-white px-2">
               Informations du donateur
             </legend>
 
             <div class="mb-4">
-              <label for="nom" class="block mb-2">Nom</label>
-            <input
+              <label for="nom" class="block mb-2 text-white">Nom</label>
+
+              <input
                 type="text"
                 id="nom"
                 name="nom"
                 required
                 pattern="^[a-zA-ZÀ-ÿ\s-]+$"
-                class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
-            />
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+              />
 
-            <p id="erreur-nom" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-nom" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div class="mb-4">
-              <label for="prenom" class="block mb-2">Prénom</label>
+              <label for="prenom" class="block mb-2 text-white">Prénom</label>
+
               <input
-                  type="text"
-                  id="prenom"
-                  name="prenom"
-                  required
-                  pattern="^[a-zA-ZÀ-ÿ\s-]+$"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                pattern="^[a-zA-ZÀ-ÿ\s-]+$"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-prenom" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-prenom" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div class="mb-4">
-              <label for="adresse" class="block mb-2">Adresse</label>
+              <label for="adresse" class="block mb-2 text-white">Adresse</label>
+
               <input
-                  type="text"
-                  id="adresse"
-                  name="adresse"
-                  required
-                  pattern="^\d+\s+[A-Za-zÀ-ÿ0-9\s'\-]+$"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="adresse"
+                name="adresse"
+                required
+                pattern="^\d+\s+[A-Za-zÀ-ÿ0-9\s'\-]+$"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-adresse" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-adresse" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div class="mb-4">
-              <label for="ville" class="block mb-2">Ville</label>
+              <label for="ville" class="block mb-2 text-white">Ville</label>
+
               <input
-                  type="text"
-                  id="ville"
-                  name="ville"
-                  required
-                  pattern="^[a-zA-ZÀ-ÿ '\-]+$"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="ville"
+                name="ville"
+                required
+                pattern="^[a-zA-ZÀ-ÿ '\-]+$"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-ville" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-ville" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div class="mb-4">
-              <label for="code-postal" class="block mb-2">Code postal</label>
+              <label for="code-postal" class="block mb-2 text-white">Code postal</label>
+
               <input
-                  type="text"
-                  id="code-postal"
-                  name="code-postal"
-                  required
-                  pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="code-postal"
+                name="code-postal"
+                required
+                pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-code-postal" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-code-postal" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div>
-              <label for="courriel" class="block mb-2">Courriel</label>
+              <label for="courriel" class="block mb-2 text-white">Courriel</label>
+
               <input
-                  type="email"
-                  id="courriel"
-                  name="courriel"
-                  regex="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"
-                  required
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="email"
+                id="courriel"
+                name="courriel"
+                regex="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"
+                required
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-courriel" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-courriel" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
           </fieldset>
 
           <nav class="flex justify-between">
-            <button type="button" class="precedent border-2 border-[#18294e] text-[#18294e] hover:bg-[#18294e] hover:text-white px-6 py-2 rounded-lg">
+
+            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
               Précédent
             </button>
 
-            <button type="button" class="suivant bg-[#18294e] hover:bg-[#101c38] text-white px-6 py-2 rounded-lg">
+            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
               Suivant
             </button>
+
           </nav>
 
         </section>
 
+
+        <!-- ============================== -->
+        <!-- ÉTAPE 3 -->
+        <!-- ============================== -->
+
         <section class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-[#18294e] mb-6">
+          <h2 class="text-2xl font-bold text-white mb-6">
             Étape 3 — Information sur le paiement
           </h2>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-[#18294e] px-2">
+            <legend class="font-semibold text-white px-2">
               Type de carte de crédit
             </legend>
 
             <ul class="space-y-3">
+
               <li>
                 <input type="radio" id="visa" name="type-carte" value="visa" required checked class="peer sr-only"/>
-                <label for="visa" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+
+                <label for="visa" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">Visa</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  Visa
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="mastercard" name="type-carte" value="mastercard" class="peer sr-only"/>
-                <label for="mastercard" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+
+                <label for="mastercard" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">Mastercard</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  Mastercard
+                </label>
               </li>
 
               <li>
                 <input type="radio" id="american-express" name="type-carte" value="american-express" class="peer sr-only"/>
-                <label for="american-express" class="block cursor-pointer border-2 border-gray-300 rounded-lg px-5 py-3
-                        hover:border-[#18294e]
+
+                <label for="american-express" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                        hover:border-[#FFB42D]
                         peer-focus:ring-2
-                        peer-focus:ring-[#18294e]
+                        peer-focus:ring-[#FFB42D]
                         peer-focus:ring-offset-2
-                        peer-checked:bg-[#18294e]
-                        peer-checked:border-[#18294e]
-                        peer-checked:text-white">American Express</label>
+                        peer-checked:bg-[#FFB42D]
+                        peer-checked:border-[#FFB42D]
+                        peer-checked:text-[#17294E]">
+                  American Express
+                </label>
               </li>
+
             </ul>
 
           </fieldset>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-[#18294e] px-2">
+            <legend class="font-semibold text-white px-2">
               Informations de la carte
             </legend>
 
@@ -352,33 +422,35 @@
               <label for="numero-carte" class="block mb-2">
                 Numéro de carte
               </label>
+
               <input
-                  type="text"
-                  id="numero-carte"
-                  name="numero-carte"
-                  required
-                  pattern="^[0-9]{4}[ ]?[0-9]{4}[ ]?[0-9]{4}[ ]?[0-9]{4}$"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="numero-carte"
+                name="numero-carte"
+                required
+                pattern="^[0-9]{4}[ ]?[0-9]{4}[ ]?[0-9]{4}[ ]?[0-9]{4}$"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-numero-carte" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-numero-carte" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div class="mb-4">
               <label for="expiration" class="block mb-2">
                 Date d'expiration
               </label>
+
               <input
-                  type="text"
-                  id="expiration"
-                  name="expiration"
-                  required
-                  pattern="^\d{2}\s?\d{2}$"
-                  placeholder="MM/AA"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="expiration"
+                name="expiration"
+                required
+                pattern="^\d{2}\s?\d{2}$"
+                placeholder="MM/AA"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-expiration" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-expiration" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div>
@@ -387,40 +459,47 @@
               </label>
 
               <input
-                  type="text"
-                  id="validation"
-                  name="validation"
-                  required
-                  pattern="[0-9]{3,4}"
-                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#18294e]"
+                type="text"
+                id="validation"
+                name="validation"
+                required
+                pattern="[0-9]{3,4}"
+                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
-              <p id="erreur-validation" class="text-red-600 text-sm mt-1"></p>
+              <p id="erreur-validation" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
           </fieldset>
 
           <nav class="flex justify-between">
-            <button type="button" class="precedent border-2 border-[#18294e] text-[#18294e] hover:bg-[#18294e] hover:text-white px-6 py-2 rounded-lg">
+
+            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
               Précédent
             </button>
 
-            <button type="button" class="suivant bg-[#18294e] hover:bg-[#101c38] text-white px-6 py-2 rounded-lg">
+            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
               Suivant
             </button>
+
           </nav>
 
         </section>
 
+
+        <!-- ============================== -->
+        <!-- ÉTAPE 4 -->
+        <!-- ============================== -->
+
         <section class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-[#18294e] mb-6">
+          <h2 class="text-2xl font-bold text-white mb-6">
             Étape 4 — Résumé du don
           </h2>
 
-          <fieldset class="border border-gray-300 rounded-lg p-5 mb-6">
+          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-[#18294e] px-2">
+            <legend class="font-semibold text-white px-2">
               Résumé
             </legend>
 
@@ -437,11 +516,13 @@
 
           <nav class="flex justify-between">
 
-            <button type="button" class="precedent border-2 border-[#18294e] text-[#18294e] hover:bg-[#18294e] hover:text-white px-6 py-2 rounded-lg">
+            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
               Précédent
             </button>
 
-            <button type="submit" class="bg-[#18294e] hover:bg-[#101c38] text-white px-6 py-2 rounded-lg">Faire le don</button>
+            <button type="submit" class="border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
+              Faire le don
+            </button>
 
           </nav>
 

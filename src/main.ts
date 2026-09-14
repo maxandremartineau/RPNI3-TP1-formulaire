@@ -80,16 +80,76 @@ function allerEtapeSuivante(): void {
 
     etape++;
     afficherEtape();
+    mettreAJourEtapes();
 }
 
 
 function allerEtapePrecedente(): void {
 
     etape--;
-
     afficherEtape();
+    mettreAJourEtapes();
 }
 
+
+// ==============================
+// MISE À JOUR (STEPS LEFT)
+// ==============================
+
+function mettreAJourEtapes(): void {
+    const cercle = document.querySelectorAll(".cercle-etape");
+    const ligne = document.querySelectorAll(".ligne-etape");
+
+    cercle.forEach((cercle, index) => {
+        cercle.classList.remove(
+            "bg-[#FFB42D]",
+            "bg-white",
+            "border-[#FFB42D]",
+            "border-[#17294E]",
+            "text-[#17294E]",
+            "text-black"
+        );
+
+        if (index < etape) {
+            // Étape complétée
+            cercle.classList.add(
+                "bg-[#FFB42D]",
+                "border-[#FFB42D]",
+                "text-black"
+            );
+        }
+        else if (index === etape) {
+            // Étape en cours
+            cercle.classList.add(
+                "bg-white",
+                "border-[#FFB42D]",
+                "text-black"
+            );
+        }
+        else {
+            // Étape à faire
+            cercle.classList.add(
+                "bg-white",
+                "border-[#17294E]",
+                "text-[#17294E]"
+            );
+        }
+    });
+
+    ligne.forEach((ligne, index) => {
+        ligne.classList.remove(
+            "bg-[#FFB42D]",
+            "bg-[#17294E]"
+        );
+
+        if (index < etape) {
+            ligne.classList.add("bg-[#FFB42D]");
+        }
+        else {
+            ligne.classList.add("bg-[#17294E]");
+        }
+    });
+}
 
 // ==============================
 // BOUTONS
@@ -147,7 +207,7 @@ function afficherErreur(
     const erreur = document.getElementById(`erreur-${element.id}`);
 
     if (erreur) {
-        erreur.textContent = message;
+        erreur.innerHTML = `<img src="../src/assets/chienOpti.svg" alt="" class="w-4 h-4 inline-block mr-1"> ${message}`;
     }
 }
 
