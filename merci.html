@@ -6,28 +6,84 @@
     <title>Merci pour votre don</title>
   </head>
 
-  <body>
+  <body class="min-h-screen flex flex-col bg-white">
 
-    <header class="bg-[#18294e] text-white p-4">
-      <p>SPA Québec</p>
+    <header class=" bg-[#18294e] border-t-2 px-4 py-4 flex items-center justify-between">
+      <img
+        src="/src/assets/logoOpti.svg"
+        alt="SPA Québec"
+        class="w-9 h-9 object-contain"
+      />
+
+      <a href="" class="bg-[#ffad21] text-[#18294e] px-8 py-3 rounded-sm text-[14px] font-bold">
+        Contactez nous
+      </a>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
-      <h1 class="text-4xl font-bold text-[#18294e] text-center mb-8">Merci pour votre don</h1>
 
-      <p>
-        Nous vous remercions sincèrement pour votre générosité et votre soutien.
-      </p>
+    <main class="flex-1 flex items-center justify-center px-6 py-12">
 
-      <p>
-        Votre don contribuera à soutenir les actions de l'UNICEF auprès des
-        enfants et des familles dans le besoin.
-      </p>
+      <section class="w-full max-w-5xl">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+          <!-- TEXTE -->
+
+          <div class="text-center md:text-left">
+
+            <h1 class="text-4xl font-bold text-[#18294e] mb-6">
+              Merci pour votre don !
+            </h1>
+
+            <p class="text-lg text-[#18294e] mb-5">
+              Nous vous remercions sincèrement pour votre générosité et votre
+              soutien envers la SPA Québec.
+            </p>
+
+            <p class="text-lg text-[#18294e] mb-5">
+              Votre don contribuera à améliorer les soins et les traitements
+              offerts aux animaux qui passent par notre établissement.
+            </p>
+
+            <p class="text-lg text-[#18294e] mb-8">
+              Grâce à votre geste, vous contribuez à leur offrir de meilleurs
+              soins, un environnement sécuritaire et une nouvelle chance.
+            </p>
+
+            <a
+              href="index.html"
+              class="inline-block bg-[#FFB42D] text-[#18294e] border-2 border-[#17294E] px-6 py-3 rounded-lg font-bold hover:bg-[#17294E] hover:text-white"
+            >
+              Faire un autre don
+            </a>
+
+          </div>
+
+          <div class="flex justify-center">
+
+            <div class="w-full max-w-[450px] aspect-square bg-[#0E4788]
+                     border-2 border-[#17294E] rounded-lg
+                     flex items-center justify-center overflow-hidden">
+
+              <img src="src/assets/chien-heureux.jpg" alt="Chien heureux" class="w-full h-full object-cover object-[center_30%]"/>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
 
-    <footer class="bg-[#18294e] text-white p-4">
-      <p>SPA Québec</p>
+
+    <footer class="bg-[#18294e] text-white p-8 text-center">
+      <p>©Maxandre Martineau, Tous droits réservés 2026</p>
     </footer>
+
+
     <script type="module" src="/src/main.ts"></script>
+
   </body>
 </html>

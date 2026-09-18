@@ -6,63 +6,81 @@
   </head>
 
   <body class="min-h-screen flex flex-col bg-white text-[#18294e]">
+      <a href="#contenu" class="sr-only focus:not-sr-only focus:underline"> Aller au contenu </a>
 
-    <header class=" bg-[#18294e] border-t-2 px-4 flex items-center justify-between">
+    <header class=" bg-[#18294e] border-t-2 px-4 py-4 flex items-center justify-between">
       <img
         src="/src/assets/logoOpti.svg"
         alt="SPA Québec"
         class="w-9 h-9 object-contain"
       />
 
-      <button
-        type="button"
-        class="bg-[#ffad21] text-[#18294e] px-4 py-1.5 rounded-sm text-[10px] font-bold"
-      >
-        Faire un don
-      </button>
+      <a href="" class="bg-[#ffad21] text-[#18294e] px-8 py-3 rounded-sm text-[14px] font-bold">
+        Contactez nous
+      </a>
     </header>
 
-    <main class="flex-1 flex flex-col items-center px-4 py-6">
+    <main id="contenu" class="flex-1 flex flex-col items-center px-4 py-6">
 
-      <h1 class="text-4xl font-bold text-[#18294e] text-center mb-8">
-        Faire un don
+      <h1 class="text-5xl font-bold text-[#18294e] text-center mb-2">
+        Faire un don à la SPA
       </h1>
 
       <nav class="w-full max-w-[600px] mx-auto my-8 overflow-x-auto" aria-label="Étapes du formulaire de don">        
-        <ol class="flex items-center justify-center">
+        <ol class="flex items-center justify-center ">
 
           <li class="flex items-center">
-            <span class="cercle-etape w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl">
+            <a
+              href="#etape1"
+              class="cercle-etape p-1 w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl focus:outline-none focus:ring-4 focus:ring-[#FFB42D]"
+              data-etape="0"
+              aria-label="Aller à l'étape 1"
+            >
               <span class="sr-only">Étape 1 </span>
               1
-            </span>
+            </a>
 
             <span class="ligne-etape block shrink-0 w-8 h-[3px] sm:w-[85px] sm:h-[3px] bg-[#17294E]"></span>
           </li>
 
           <li class="flex items-center">
-            <span class="cercle-etape w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl">
+            <a
+              href="#etape2"
+              class="cercle-etape m-1 w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl focus:outline-none focus:ring-4 focus:ring-[#FFB42D]"
+              data-etape="1"
+              aria-label="Aller à l'étape 2"
+            >
               <span class="sr-only">Étape 2 </span>
               2
-            </span>
+            </a>
 
             <span class="ligne-etape block shrink-0 w-8 h-[3px] sm:w-[85px] sm:h-[3px] bg-[#17294E]"></span>
           </li>
 
           <li class="flex items-center">
-            <span class="cercle-etape w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl">
+            <a
+              href="#etape3"
+              class="cercle-etape m-1 w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl focus:outline-none focus:ring-4 focus:ring-[#FFB42D]"
+              data-etape="2"
+              aria-label="Aller à l'étape 3"
+            >
               <span class="sr-only">Étape 3 </span>
               3
-            </span>
+            </a>
 
             <span class="ligne-etape block shrink-0 w-8 h-[3px] sm:w-[85px] sm:h-[3px] bg-[#17294E]"></span>
           </li>
 
           <li>
-            <span class="cercle-etape w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl">
+            <a
+              href="#etape4"
+              class="cercle-etape m-1 w-10 h-10 sm:w-[60px] sm:h-[60px] rounded-full border-[3px] flex items-center justify-center font-bold text-base sm:text-xl focus:outline-none focus:ring-4 focus:ring-[#FFB42D]"
+              data-etape="3"
+              aria-label="Aller à l'étape 4"
+            >
               <span class="sr-only">Étape 4 </span>
               4
-            </span>
+            </a>
           </li>
 
         </ol>
@@ -75,19 +93,19 @@
         <!-- ÉTAPE 1 -->
         <!-- ============================== -->
 
-        <section class="etape max-w-3xl mx-auto">
+        <section id="etape1" class="etape max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-white mb-6">
+          <h2 class=" font-bold text-white mb-6 text-4xl text-center">
             Étape 1 — Informations sur le don
           </h2>
 
           <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
-            <legend class="font-semibold text-white px-2">
+            <legend class="font-semibold text-white px-2 text-2xl">
               Type de versement
             </legend>
 
-            <ul class="flex w-full gap-3">
-              <li class="w-1/2">
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li class="w-full">
                 <input
                   type="radio"
                   id="versement-unique"
@@ -100,8 +118,8 @@
 
                 <label
                   for="versement-unique"
-                  class="block w-full cursor-pointer rounded-lg
-                        border-2 border-white bg-white
+                  class="flex items-center justify-center min-h-[50px] w-full cursor-pointer rounded-lg
+                        border-2 border-white bg-white font-medium text-[#18294e]
                         px-5 py-3 text-center
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
@@ -115,19 +133,20 @@
                 </label>
               </li>
 
-              <li class="w-1/2">
+              <li class="w-full">
                 <input
                   type="radio"
-                  id="versement-periodique"
+                  id="versement-mensuel"
                   name="versement"
                   value="periodique"
                   class="peer sr-only"
                 />
 
                 <label
-                  for="versement-periodique"
-                  class="block w-full cursor-pointer rounded-lg
-                        border-2 border-white bg-white
+                  for="versement-mensuel"
+                  class="flex items-center justify-center min-h-[50px] 
+                        w-full cursor-pointer rounded-lg font-medium
+                        border-2 border-white bg-white text-[#18294e]
                         px-5 py-3 text-center
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
@@ -137,21 +156,21 @@
                         peer-checked:bg-[#FFB42D]
                         peer-checked:text-[#17294E]"
                 >
-                  Versements périodiques
+                  Versements mensuels
                 </label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
-            <legend class="font-semibold text-white px-2">
+            <legend class="font-semibold text-white px-2 text-2xl">
               Montant du don
             </legend>
 
-            <ul class="grid grid-cols-2 sm:grid-cols-5 gap-3">
-              <li>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li class="w-full">
                 <input type="radio" id="montant-5" name="montant" value="5" class="peer sr-only"/>
-                <label for="montant-5" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="montant-5" class="flex items-center justify-center min-h-[50px] w-full cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 font-medium text-[#18294e]
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -163,9 +182,9 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="montant-10" name="montant" value="10" class="peer sr-only"/>
-                <label for="montant-10" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="montant-10" class="flex items-center justify-center min-h-[50px] w-full cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 text-[#18294e] font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -177,9 +196,9 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="montant-20" name="montant" value="20" class="peer sr-only"/>
-                <label for="montant-20" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="montant-20" class="flex items-center justify-center min-h-[50px] w-full cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 text-[#18294e] font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -191,9 +210,9 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="montant-50" name="montant" value="50" class="peer sr-only"/>
-                <label for="montant-50" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="montant-50" class="flex items-center justify-center min-h-[50px] w-full cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 text-[#18294e] font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -205,9 +224,9 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="montant-200" name="montant" value="200" class="peer sr-only"/>
-                <label for="montant-200" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="montant-200" class="flex items-center justify-center min-h-[50px] w-full cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 text-[#18294e] font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -221,7 +240,8 @@
             </ul>
 
             <div class="mt-5">
-              <label for="montant-personnalise" class="block mb-2">
+              <label for="montant-personnalise" class="block mb-2 text-white text-1xl font-bold">
+                Autre montant
               </label>
 
               <input
@@ -236,8 +256,8 @@
             </div>
           </fieldset>
 
-          <nav class="flex justify-end">
-            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
+          <nav class="flex justify-end ">
+            <button type="button" class="w-full suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-4 rounded-lg font-bold text-xl">
               Suivant
             </button>
           </nav>
@@ -249,15 +269,15 @@
         <!-- ÉTAPE 2 -->
         <!-- ============================== -->
 
-        <section class="etape hidden max-w-3xl mx-auto">
+        <section id="etape2" class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-white mb-6">
+          <h2 class="font-bold text-white mb-6 text-4xl text-center">
             Étape 2 — Coordonnées du donateur
           </h2>
 
           <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-white px-2">
+            <legend class="font-semibold text-white px-2 text-2xl">
               Informations du donateur
             </legend>
 
@@ -270,7 +290,7 @@
                 name="nom"
                 required
                 pattern="^[a-zA-ZÀ-ÿ\s-]+$"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+                class="w-72 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
               <p id="erreur-nom" class="text-[#FF9C9C] text-sm mt-1"></p>
@@ -285,55 +305,10 @@
                 name="prenom"
                 required
                 pattern="^[a-zA-ZÀ-ÿ\s-]+$"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+                class="w-72 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
               <p id="erreur-prenom" class="text-[#FF9C9C] text-sm mt-1"></p>
-            </div>
-
-            <div class="mb-4">
-              <label for="adresse" class="block mb-2 text-white">Adresse</label>
-
-              <input
-                type="text"
-                id="adresse"
-                name="adresse"
-                required
-                pattern="^\d+\s+[A-Za-zÀ-ÿ0-9\s'\-]+$"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
-              />
-
-              <p id="erreur-adresse" class="text-[#FF9C9C] text-sm mt-1"></p>
-            </div>
-
-            <div class="mb-4">
-              <label for="ville" class="block mb-2 text-white">Ville</label>
-
-              <input
-                type="text"
-                id="ville"
-                name="ville"
-                required
-                pattern="^[a-zA-ZÀ-ÿ '\-]+$"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
-              />
-
-              <p id="erreur-ville" class="text-[#FF9C9C] text-sm mt-1"></p>
-            </div>
-
-            <div class="mb-4">
-              <label for="code-postal" class="block mb-2 text-white">Code postal</label>
-
-              <input
-                type="text"
-                id="code-postal"
-                name="code-postal"
-                required
-                pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
-              />
-
-              <p id="erreur-code-postal" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div>
@@ -351,15 +326,60 @@
               <p id="erreur-courriel" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
+            <div class="mb-4">
+              <label for="adresse" class="block mb-2 text-white">Adresse</label>
+
+              <input
+                type="text"
+                id="adresse"
+                name="adresse"
+                required
+                pattern="^\d+\s+[A-Za-zÀ-ÿ0-9\s'\-]+$"
+                class="w-72 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+              />
+
+              <p id="erreur-adresse" class="text-[#FF9C9C] text-sm mt-1"></p>
+            </div>
+
+            <div class="mb-4">
+              <label for="ville" class="block mb-2 text-white">Ville</label>
+
+              <input
+                type="text"
+                id="ville"
+                name="ville"
+                required
+                pattern="^[a-zA-ZÀ-ÿ '\-]+$"
+                class="w-72 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+              />
+
+              <p id="erreur-ville" class="text-[#FF9C9C] text-sm mt-1"></p>
+            </div>
+
+            <div class="mb-4">
+              <label for="code-postal" class="block mb-2 text-white">Code postal</label>
+
+              <input
+                type="text"
+                id="code-postal"
+                name="code-postal"
+                required
+                pattern="[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d"
+                class="w-48 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+              />
+
+              <p id="erreur-code-postal" class="text-[#FF9C9C] text-sm mt-1"></p>
+            </div>
+
           </fieldset>
 
-          <nav class="flex justify-between">
+          <nav class="flex flex-col sm:flex-row sm:justify-between gap-3">
 
-            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
+            <button type="button" class="precedent w-full sm:w-1/2 border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-4 rounded-lg text-xl font-bold">
               Précédent
             </button>
 
-            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
+            <button type="button" class="suivant w-full sm:w-1/2 border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-4 rounded-lg text-xl font-bold">
               Suivant
             </button>
 
@@ -372,24 +392,23 @@
         <!-- ÉTAPE 3 -->
         <!-- ============================== -->
 
-        <section class="etape hidden max-w-3xl mx-auto">
+        <section id="etape3" class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-white mb-6">
+          <h2 class="font-bold text-white mb-6 text-4xl text-center">
             Étape 3 — Information sur le paiement
           </h2>
 
           <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-white px-2">
+            <legend class="font-semibold text-white px-2 text-2xl">
               Type de carte de crédit
             </legend>
 
-            <ul class="space-y-3">
-
-              <li>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <li class="w-full">
                 <input type="radio" id="visa" name="type-carte" value="visa" required checked class="peer sr-only"/>
 
-                <label for="visa" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="visa" class="flex items-center justify-center min-h-[50px] cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -401,10 +420,10 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="mastercard" name="type-carte" value="mastercard" class="peer sr-only"/>
 
-                <label for="mastercard" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="mastercard" class="flex items-center justify-center min-h-[50px] cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -416,10 +435,10 @@
                 </label>
               </li>
 
-              <li>
+              <li class="w-full">
                 <input type="radio" id="american-express" name="type-carte" value="american-express" class="peer sr-only"/>
 
-                <label for="american-express" class="block cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3
+                <label for="american-express" class="flex items-center justify-center min-h-[50px] cursor-pointer border-2 border-white bg-white rounded-lg px-5 py-3 font-medium
                         hover:border-[#FFB42D]
                         peer-focus:ring-2
                         peer-focus:ring-[#FFB42D]
@@ -437,15 +456,15 @@
 
           <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
 
-            <legend class="font-semibold text-white px-2">
+            <legend class="font-semibold text-white px-2 text-2xl">
               Informations de la carte
             </legend>
 
             <div class="mb-4">
-              <label for="numero-carte" class="block mb-2">
+              <label for="numero-carte" class="block mb-2 text-white">
                 Numéro de carte
               </label>
-
+              <p class="text-sm text-white mb-2"> (Exemple : 1234 5678 9012 3456) </p>
               <input
                 type="text"
                 id="numero-carte"
@@ -459,27 +478,31 @@
             </div>
 
             <div class="mb-4">
-              <label for="expiration" class="block mb-2">
+              <label for="expiration" class="block mb-2 text-white">
                 Date d'expiration
               </label>
+
+              <p class="text-sm text-white mb-2"> (Exemple : 05/29) </p>
 
               <input
                 type="text"
                 id="expiration"
                 name="expiration"
                 required
-                pattern="^\d{2}\s?\d{2}$"
+                pattern="^\d{2}[\/\s]?\d{2}$"
                 placeholder="MM/AA"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+                class="w-48 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
               <p id="erreur-expiration" class="text-[#FF9C9C] text-sm mt-1"></p>
             </div>
 
             <div>
-              <label for="validation" class="block mb-2">
+              <label for="validation" class="block mb-2 text-white">
                 Code de validation
               </label>
+
+              <p class="text-sm text-white mb-2"> Code de 3 à 4 chiffre au dos de la carte </p>
 
               <input
                 type="text"
@@ -487,7 +510,7 @@
                 name="validation"
                 required
                 pattern="[0-9]{3,4}"
-                class="w-full border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
+                class="w-48 border-2 border-white bg-white rounded-lg px-3 py-2 focus:outline-none focus:border-[#FFB42D]"
               />
 
               <p id="erreur-validation" class="text-[#FF9C9C] text-sm mt-1"></p>
@@ -495,13 +518,13 @@
 
           </fieldset>
 
-          <nav class="flex justify-between">
+          <nav class="flex flex-col sm:flex-row sm:justify-between gap-3">
 
-            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
+            <button type="button" class="precedent w-full sm:w-1/2 border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-4 rounded-lg text-xl font-bold">
               Précédent
             </button>
 
-            <button type="button" class="suivant border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
+            <button type="button" class="suivant w-full sm:w-1/2 border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-4 rounded-lg text-xl font-bold">
               Suivant
             </button>
 
@@ -514,36 +537,72 @@
         <!-- ÉTAPE 4 -->
         <!-- ============================== -->
 
-        <section class="etape hidden max-w-3xl mx-auto">
+        <section id="etape4" class="etape hidden max-w-3xl mx-auto">
 
-          <h2 class="text-2xl font-bold text-white mb-6">
+          <h2 class="font-bold text-white mb-6 text-4xl text-center">
             Étape 4 — Résumé du don
           </h2>
 
-          <fieldset class="border border-[#17294E] rounded-lg p-5 mb-6">
+          <fieldset class="fieldset-formulaire mb-4">
 
-            <legend class="font-semibold text-white px-2">
-              Résumé
+            <legend class="legend-formulaire text-white text-2xl mb-4 font-bold ">
+                Résumé
             </legend>
 
-            <p class="mb-3">Type de versement : Lorem ipsum</p>
-            <p class="mb-3">Type de montant : Lorem ipsum</p>
-            <p class="mb-3">Montant : Lorem ipsum</p>
-            <p class="mb-3">Nom du donateur : Lorem ipsum</p>
-            <p class="mb-3">Entreprise : Lorem ipsum</p>
-            <p class="mb-3">Adresse : Lorem ipsum</p>
-            <p class="mb-3">Courriel : Lorem ipsum</p>
-            <p>Type de carte : Lorem ipsum</p>
+            <p class="resume-item text-white mb-1">
+                <strong>Type de versement :</strong>
+                <span id="resume-versement"></span>
+            </p>
 
-          </fieldset>
+            <p class="resume-item text-white mb-1">
+                <strong>Montant :</strong>
+                <span id="resume-montant"></span>
+            </p>
 
-          <nav class="flex justify-between">
+            <p class="resume-item text-white mb-1">
+                <strong>Nom :</strong>
+                <span id="resume-nom"></span>
+            </p>
 
-            <button type="button" class="precedent border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg">
+            <p class="resume-item text-white mb-1">
+                <strong>Prénom :</strong>
+                <span id="resume-prenom"></span>
+            </p>
+
+            <p class="resume-item text-white mb-1">
+                <strong>Adresse :</strong>
+                <span id="resume-adresse"></span>
+            </p>
+
+            <p class="resume-item text-white mb-1">
+                <strong>Ville :</strong>
+                <span id="resume-ville"></span>
+            </p>
+
+            <p class="resume-item text-white mb-1">
+                <strong>Code postal :</strong>
+                <span id="resume-code-postal"></span>
+            </p>
+
+            <p class="resume-item text-white mb-1">
+                <strong>Courriel :</strong>
+                <span id="resume-courriel"></span>
+            </p>
+
+            <p class="text-white">
+                <strong>Type de carte :</strong>
+                <span id="resume-carte"></span>
+            </p>
+
+        </fieldset>
+
+          <nav class="flex flex-col sm:flex-row sm:justify-between gap-3">
+
+            <button type="button" class="precedent w-full sm:w-1/2 border-2 border-[#17294E] bg-white hover:bg-[#FFB42D] px-6 py-2 rounded-lg text-xl font-bold">
               Précédent
             </button>
 
-            <button type="submit" class="border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg">
+            <button type="submit" class="w-full sm:w-1/2 border-2 border-[#17294E] bg-[#FFB42D] hover:bg-[#17294E] hover:text-white text-[#17294E] px-6 py-2 rounded-lg text-xl font-bold">
               Faire le don
             </button>
 
