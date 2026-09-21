@@ -65,11 +65,20 @@ function afficherEtape(): void {
     });
 
     etapesNavigation.forEach((item, index) => {
+        // Étape actuelle
         if (index === etape) {
             item.setAttribute("aria-current", "step");
         } else {
             item.removeAttribute("aria-current");
         }
+
+    // Étapes qui ne sont pas encore accessibles
+    if (index > 0 && !etapesValidees[index - 1]){
+        item.setAttribute("aria-disabled", "true");
+    } else{
+        item.removeAttribute("aria-disabled");
+    }
+
     });
 }
 
@@ -143,6 +152,13 @@ function mettreAJourEtapes(): void {
                 "text-[#17294E]"
             );
         }
+        // Accessibilité
+        if (index > 0 && !etapesValidees[index - 1]) {
+            cercle.setAttribute("aria-disabled", "true");
+        } else {
+            cercle.removeAttribute("aria-disabled");
+        }
+
     });
 
     ligne.forEach((ligne, index) => {
@@ -175,11 +191,22 @@ function initialiserBoutons(): void {
     });
 
     etapesNavigation.forEach((lien, index)=>{
+
         lien.addEventListener("click",(event)=>{
-            if(index > 0 && !etapesValidees[index -1]){
+
+            // Impossible d'aller a un étape future
+            if(index > etape){
                 event.preventDefault();
                 return;
             }
+
+            // Si on revient en arrière
+            if(index < etape){
+                for(let indexEtape = index; indexEtape < etapesValidees.length; indexEtape++){
+                    etapesValidees[indexEtape] = false
+                }
+            }
+            
             etape = index;
 
             afficherEtape();
