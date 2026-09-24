@@ -135,6 +135,7 @@ function mettreAJourEtapes(): void {
                 "border-[#FFB42D]",
                 "text-black"
             );
+            cercle.innerHTML = `<img src="src/assets/check.svg" alt="" class="w-6 h-6">`;
         }
         else if (index === etape) {
             // Étape en cours
@@ -143,6 +144,7 @@ function mettreAJourEtapes(): void {
                 "border-[#FFB42D]",
                 "text-black"
             );
+            cercle.textContent = String(index + 1);
         }
         else {
             // Étape à faire
@@ -151,6 +153,7 @@ function mettreAJourEtapes(): void {
                 "border-[#17294E]",
                 "text-[#17294E]"
             );
+            cercle.textContent = String(index + 1);
         }
         // Accessibilité
         if (index > 0 && !etapesValidees[index - 1]) {
