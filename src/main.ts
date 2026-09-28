@@ -1,5 +1,7 @@
 import "./css/style.css";
 
+import checkIcon from "./assets/check.svg";
+import chienIcon from "./assets/chienOpti.svg";
 // ==============================
 // VARIABLES
 // ==============================
@@ -135,7 +137,7 @@ function mettreAJourEtapes(): void {
                 "border-[#FFB42D]",
                 "text-black"
             );
-            cercle.innerHTML = `<img src="src/assets/check.svg" alt="" class="w-6 h-6">`;
+            cercle.innerHTML = `<img src="${checkIcon}" alt="" class="w-6 h-6">`;      
         }
         else if (index === etape) {
             // Étape en cours
@@ -243,8 +245,9 @@ function mettreAJourResume(): void{
     
     const visa = document.getElementById("visa") as HTMLInputElement;
     const mastercard = document.getElementById("mastercard") as HTMLInputElement;
-    const amex = document.getElementById("amex") as HTMLInputElement;
+    const amex = document.getElementById("american-express") as HTMLInputElement;
 
+    
     // Type de versement
     if (versementUnique.checked){
         document.getElementById("resume-versement")!.textContent = "Un versement unique" ;
@@ -344,7 +347,7 @@ function afficherErreur(
     const erreur = document.getElementById(`erreur-${element.id}`);
 
     if (erreur) {
-        erreur.innerHTML = `<img src="../src/assets/chienOpti.svg" alt="" class="w-4 h-4 inline-block mr-1"> ${message}`;
+        erreur.innerHTML = `<img src="${chienIcon}" alt="" class="w-4 h-4 inline-block mr-1"> ${message}`;
     }
 }
 
